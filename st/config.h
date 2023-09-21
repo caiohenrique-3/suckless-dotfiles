@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono Nerd Font:pixelsize=16:antialias=true:autohint=true";
+static char *font = "Inconsolata Nerd Font:pixelsize=20:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -180,8 +180,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
-	{ ShiftMask,            XK_K,           kscrollup,      {.i = -1} },
-	{ ShiftMask,            XK_J,           kscrolldown,    {.i = -1} },
+	/* { ShiftMask,            XK_K,           kscrollup,      {.i = -1} },
+	{ ShiftMask,            XK_J,           kscrolldown,    {.i = -1} }, */
 };
 
 /*
