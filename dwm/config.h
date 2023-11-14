@@ -85,6 +85,7 @@ static const Key keys[] = {
   { MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("~/Scripts/mount-media.sh") },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("~/Scripts/power-menu.sh") },
 	{ MODKEY|ShiftMask,             XK_r,      spawn,          SHCMD("~/Scripts/reset-wallpaper.sh") },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("~/Scripts/copy-symbol.sh") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
