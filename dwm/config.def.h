@@ -68,6 +68,7 @@ static const char *up_vol[]   = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", 
 static const char *down_vol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%",    NULL };
 static const char *mute_vol[] = { "pactl", "set-sink-mute",   "@DEFAULT_SINK@", "toggle", NULL };
 static const char *print[]  = { "flameshot", "gui", NULL };
+static const char *print_and_copy_to_clipboard[]  = { "flameshot", "gui", NULL };
 static const char *dunstreload[]  = { "killall", "dunst;","notify-send", "dunst", "Reloaded", "config", NULL };
 
 static const Key keys[] = {
@@ -79,13 +80,14 @@ static const Key keys[] = {
   { 0,                            XK_F4,     spawn,          {.v = mute_vol } },
   { 0,                            XK_F2,     spawn,          {.v = down_vol } },
   { 0,                            XK_F3,     spawn,          {.v = up_vol } },
-	{ MODKEY,                       XK_s,      spawn,          {.v = print } },
 	{ MODKEY|ShiftMask,             XK_h,      spawn,          SHCMD("~/Scripts/keybind-helper.sh") },
 	{ MODKEY|ControlMask,           XK_e,      spawn,          SHCMD("~/Scripts/dmenu-emoji.sh") },
   { MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("~/Scripts/mount-media.sh") },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("~/Scripts/power-menu.sh") },
 	{ MODKEY|ShiftMask,             XK_r,      spawn,          SHCMD("~/Scripts/reset-wallpaper.sh") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("~/Scripts/copy-symbol.sh") },
+	{ MODKEY,                       XK_s,      spawn,          SHCMD("~/Scripts/print-and-save.sh") },
+	{ MODKEY|ControlMask,           XK_s,      spawn,          SHCMD("~/Scripts/print-to-clipboard.sh") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
