@@ -65,6 +65,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *lf[]  = { "st", "-e", "/home/unknown/.config/lf/scripts/lfub.sh", NULL };
 static const char *thunar[]  = { "thunar", NULL };
 static const char *dunstreload[]  = { "killall", "dunst;","notify-send", "dunst", "Reloaded", "config", NULL };
+static const char *flameshot[]  = { "flameshot", "gui", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -72,6 +73,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = lf } },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = thunar } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = flameshot } },
   { MODKEY,                       XK_F4,     spawn,          SHCMD("~/Scripts/volume-control.sh mute") },
   { MODKEY,                       XK_F2,     spawn,          SHCMD("~/Scripts/volume-control.sh down") },
   { MODKEY,                       XK_F3,     spawn,          SHCMD("~/Scripts/volume-control.sh up") },
@@ -81,8 +83,6 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("~/Scripts/power-menu.sh") },
 	{ MODKEY|ShiftMask,             XK_r,      spawn,          SHCMD("~/Scripts/reset-wallpaper.sh") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("~/Scripts/copy-symbol.sh") },
-	{ MODKEY,                       XK_s,      spawn,          SHCMD("~/Scripts/print-and-save.sh") },
-	{ MODKEY|ControlMask,           XK_s,      spawn,          SHCMD("~/Scripts/print-to-clipboard.sh") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
