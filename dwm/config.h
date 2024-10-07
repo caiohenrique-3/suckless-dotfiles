@@ -3,7 +3,7 @@
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const int startwithgaps      = 1;        /* 1 means gaps are used by default */
-static const unsigned int gappx     = 10;       /* default gap between windows in pixels */
+static const unsigned int gappx     = 12;       /* default gap between windows in pixels */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft = 0;    /* 0: systray in the right corner, >0: systray on left of status text */
@@ -13,8 +13,8 @@ static const int showsystray        = 1;        /* 0 means no systray */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "GohuFont Nerd Font:size=10" };
-static const char dmenufont[]       = "GohuFont Nerd Font:size=10";
+static const char *fonts[]          = { "GohuFont Nerd Font:size=12" };
+static const char dmenufont[]       = "GohuFont Nerd Font:size=12";
 
 #include "/home/unknown/.cache/wal/colors-wal-dwm.h"
 
@@ -121,8 +121,8 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-  { MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {1} },
+	{ MODKEY|ShiftMask,             XK_q,      quit,           {1} },
+  { MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {0} },
 	{ MODKEY|ControlMask,           XK_Escape, spawn,   {.v = dunstreload } },
 };
 
