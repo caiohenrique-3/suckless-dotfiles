@@ -51,14 +51,6 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-# Suckless
+# Suckless build thingys
 *.orig
 *.rej
-
-# Ignore compiled binaries
-dwm
-st
-dmenu
-
-# Ignore installation files
-config.h
