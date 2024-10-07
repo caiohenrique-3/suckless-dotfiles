@@ -19,9 +19,9 @@ static const char dmenufont[]       = "GohuFont Nerd Font:size=10";
 #include "/home/unknown/.cache/wal/colors-wal-dwm.h"
 
 /* tagging */
-// static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3", "4", "5" };
 
-static const char *tags[] = { "terminal", "browser", "chat", "games", "files", "misc" };
+/*static const char *tags[] = { "terminal", "browser", "chat", "games", "files", "misc" };*/
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -122,6 +122,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+  { MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {1} },
 	{ MODKEY|ControlMask,           XK_Escape, spawn,   {.v = dunstreload } },
 };
 
