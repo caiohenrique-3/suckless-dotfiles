@@ -75,7 +75,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = lf } },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = thunar } },
-	{ MODKEY,                       XK_s,      spawn,          {.v = flameshot } },
+  { MODKEY,                       XK_s,      spawn,          SHCMD("~/Scripts/maim-screenshot.sh") },
   { MODKEY,                       XK_F4,     spawn,          SHCMD("~/Scripts/volume-control.sh mute") },
   { MODKEY,                       XK_F2,     spawn,          SHCMD("~/Scripts/volume-control.sh down") },
   { MODKEY,                       XK_F3,     spawn,          SHCMD("~/Scripts/volume-control.sh up") },
